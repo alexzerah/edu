@@ -41,3 +41,66 @@ gsap.to('h1', {duration: 2, x: 100});
 gsap.from('h1', {duration: 2, opacity: 0});
 gsap.fromTo('h1', {duration: 2, opacity: 0}, {opacity: 100, x: 100});
 ```
+
+### Timeline
+
+Une timeline est un conteneur pour les tweens. Elle permet de contrôler plusieurs tweens en même temps.
+
+```js
+const tl = gsap.timeline();
+tl.to('h1', {duration: 2, x: 100});
+tl.from('h1', {duration: 2, opacity: 0});
+tl.fromTo('h1', {duration: 2, opacity: 0}, {opacity: 100, x: 100});
+```
+
+### Easing
+
+- easeIn : accélération au début
+- easeOut : décélération à la fin
+- easeInOut : accélération au début et décélération à la fin
+
+L'animation par défaut est linéaire. Pour changer cela, il faut utiliser l'option `ease` dans les tweens.
+
+```js
+gsap.to('h1', {duration: 2, x: 100, ease: "bounce"});
+```
+
+- `Power0` (linear) : animation linéaire
+- `Power1`
+- `Power2`
+- `Power3`
+- `Power4`
+- `Back`
+- `Elastic`
+- `Bounce`
+- `Rough`
+- `SlowMo`
+- `Stepped`
+- `Circ`
+- `Expo`
+- `Sine`
+- `Custom`
+
+### Décalage
+
+Pour décaler le début d'une animation, il faut utiliser l'option `delay` dans les tweens.
+
+```js
+gsap.to('h1', {duration: 2, x: 100, delay: 2});
+```
+
+### Répétition
+
+Pour répéter une animation, il faut utiliser l'option `repeat` dans les tweens.
+
+```js
+gsap.to('h1', {duration: 2, x: 100, repeat: 2});
+```
+
+#### Répétition infinie
+
+Pour répéter une animation à l'infini, il faut utiliser l'option `repeat` dans les tweens.
+
+```js
+gsap.to('h1', {duration: 2, x: 100, repeat: -1});
+```

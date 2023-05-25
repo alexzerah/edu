@@ -1,0 +1,4 @@
+draft/*.md
+node_modules
+.Ulysses-Settings.plist
+.Ulysses-Group.plist
